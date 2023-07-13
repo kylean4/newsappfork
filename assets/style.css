@@ -1,0 +1,30 @@
+
+.headlines {
+    border: solid black 1px;
+    height: 500px;
+    width: 100%;
+    margin: auto;
+    margin-top: 100px;
+    background-color: red;
+    font-size: 100px;
+}
+
+.weather {
+    border: solid black 1px;
+    height: 500px;
+    width: 100%;
+    margin: auto;
+    margin-top: 100px;
+    background-color: blue;
+    font-size: 100px;
+}
+
+.form {
+    border: solid black 1px;
+    height: 500px;
+    width: 100%;
+    margin: auto;
+    margin-top: 100px;
+    background-color: green;
+    font-size: 100px;
+}
