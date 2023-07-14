@@ -1,4 +1,5 @@
 
+/* Garrett's CSS */
 .headlines {
     border: solid black 1px;
     height: 500px;
@@ -9,22 +10,24 @@
     font-size: 100px;
 }
 
+/* Jasmin's CSS */
 .weather {
     border: solid black 1px;
     height: 500px;
     width: 100%;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 50px;
     background-color: blue;
     font-size: 100px;
 }
 
+/* Kyle's CSS */
 .form {
     border: solid black 1px;
     height: 500px;
     width: 100%;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 50px;
     background-color: green;
     font-size: 100px;
 }
