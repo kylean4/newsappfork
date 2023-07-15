@@ -1,14 +1,135 @@
 
 /* Garrett's CSS */
-.headlines {
-    border: solid black 1px;
-    height: 500px;
-    width: 100%;
-    margin: auto;
-    margin-top: 100px;
-    background-color: red;
-    font-size: 100px;
+
+/* 🔥🔥🔥 TILE 1 🔥🔥🔥*/
+#story1-div {
+    text-align: center;
 }
+
+#image-display {
+    margin-top: 25px;
+}
+
+#title {
+    font-weight: bold;
+    color: black;
+    font-size: 25px;
+}
+
+#author {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+#summary {
+    margin-top: 20px;
+    color: black;
+    font-size: 20px;
+}
+
+#button {
+    font-size: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* 🔥🔥🔥 TILE 2 🔥🔥🔥 */
+#story2-div {
+    text-align: center;
+}
+
+#image-display2 {
+    margin-top: 25px;
+}
+
+#title2 {
+    font-weight: bold;
+    color: black;
+    font-size: 25px;
+}
+
+#author2 {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+#summary2 {
+    margin-top: 20px;
+    color: black;
+    font-size: 20px;
+}
+
+#button2 {
+    font-size: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* 🔥🔥🔥 TILE 3 🔥🔥🔥 */
+#story3-div {
+    text-align: center;
+}
+
+#image-display3 {
+    margin-top: 25px;
+}
+
+#title3 {
+    font-weight: bold;
+    color: black;
+    font-size: 25px;
+}
+
+#author3 {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+#summary3 {
+    margin-top: 20px;
+    color: black;
+    font-size: 20px;
+}
+
+#button3 {
+    font-size: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* 🔥🔥🔥 TILE 4 🔥🔥🔥 */
+#story4-div {
+    text-align: center;
+}
+
+#image-display4 {
+    margin-top: 25px;
+}
+
+#title4 {
+    font-weight: bold;
+    color: black;
+    font-size: 25px;
+}
+
+#author4 {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+#summary4 {
+    margin-top: 20px;
+    color: black;
+    font-size: 20px;
+}
+
+#button4 {
+    font-size: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+
 
 /* Jasmin's CSS */
 .weather {
