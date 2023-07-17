@@ -131,3 +131,43 @@ const signUp = e => {
   console.log(localStorage.getItem('formData'));
   e.preventDefault();
 };
+
+  // Function to update the displayed local storage
+function updateLocalStorageDisplay() {
+  // Retrieve data from local storage
+  var storedData = localStorage.getItem('formData');
+
+ // Check if there is data in local storage
+ if (storedData) {
+   // Parse the data from string to object (if needed)
+  var parsedData = JSON.parse(storedData);
+
+     // Update the HTML with the stored data
+     var dataContainer = document.getElementById('dataContainer');
+     dataContainer.innerHTML = '<pre>' + JSON.stringify(parsedData, null, 2) + '</pre>';
+ } else {
+     // No data found in local storage
+  var dataContainer = document.getElementById('dataContainer');
+  dataContainer.innerHTML = 'No data found.';
+ }
+}
+
+// Get reference to the submit button
+ var submitButton = document.getElementById('Newsletter');
+
+ // Add event listener to the submit button
+submitButton.addEventListener('click', function() {
+      updateLocalStorageDisplay(); // Update the displayed local storage
+ });
+  
+// Get reference to the clear button
+var clearButton = document.getElementById('clearButton');
+
+// Add event listener to the clear button
+clearButton.addEventListener('click', function() {
+    // Clear the local storage
+    localStorage.clear();
+
+    // Redirect the user to a new page
+    window.location.href = 'newpage.html';
+});
