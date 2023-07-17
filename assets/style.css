@@ -1,10 +1,20 @@
 
 /* Garrett's CSS */
 
+.hero-body {
+    text-align: center;
+}
+
+.button {
+    margin-left: 50px;
+    font-size: 25px;
+}
+
 /* 🔥🔥🔥 TILE 1 🔥🔥🔥*/
 #story1-div {
     text-align: center;
-}
+
+}   
 
 #image-display {
     margin-top: 25px;
@@ -30,7 +40,7 @@
 #button {
     font-size: 20px;
     border-radius: 10px;
-    margin-top: 20px;
+  
 }
 
 /* 🔥🔥🔥 TILE 2 🔥🔥🔥 */

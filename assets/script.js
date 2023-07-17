@@ -1,119 +1,118 @@
-// Garrett's Variables and Functions
 
+// 🔥🔥🔥 Variables 🔥🔥🔥
+// API LINKS BY NEWS TOPIC
 let headlineNews = "https://newsapi.org/v2/top-headlines?country=us&apiKey=d41b7704e2764f2bbe291cbb929ef58f";
+let businessNews = "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=d41b7704e2764f2bbe291cbb929ef58f";
+let entertainmentNews = "https://newsapi.org/v2/top-headlines?country=us&category=entertainment&apiKey=d41b7704e2764f2bbe291cbb929ef58f";
+let generalNews = "https://newsapi.org/v2/top-headlines?country=us&category=general&apiKey=d41b7704e2764f2bbe291cbb929ef58f";
+let healthNews = "https://newsapi.org/v2/top-headlines?country=us&category=health&apiKey=d41b7704e2764f2bbe291cbb929ef58f";
+let scienceNews = "https://newsapi.org/v2/top-headlines?country=us&category=science&apiKey=d41b7704e2764f2bbe291cbb929ef58f";
+let sportsNews = "https://newsapi.org/v2/top-headlines?country=us&category=sports&apiKey=d41b7704e2764f2bbe291cbb929ef58f";
+let techNews = "https://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey=d41b7704e2764f2bbe291cbb929ef58f";
 
-// 🔥🔥🔥 TILE 1 🔥🔥🔥
+// TILE 1 SELECTORS
 let imageDisplay = document.querySelector('#image-display');
 let title = document.querySelector('#title');
 let author = document.querySelector('#author');
 let summary = document.querySelector('#summary');
-let button = document.querySelector('#button'); 
-
+let button = document.querySelector('#button');
 let img = document.createElement('img');
 
-function fetchNews() {
-    fetch(headlineNews)
-    .then(function (response) {
-return response.json();
-})
-
-.then (function (data) {
-    img.src = data.articles[0].urlToImage;
-    imageDisplay.appendChild(img);
-    console.log(data);
-    title.textContent = data.articles[0].title;
-    author.textContent = data.articles[0].author;
-    summary.textContent = data.articles[0].description;
-    button.onclick = function () {
-        window.location.href = data.articles[0].url;
-    }
-})
-};
-fetchNews();
-
-// 🔥🔥🔥 TILE 2 🔥🔥🔥
+// TILE 2 SELECTORS
 let imageDisplay2 = document.querySelector('#image-display2');
 let title2 = document.querySelector('#title2');
 let author2 = document.querySelector('#author2');
 let summary2 = document.querySelector('#summary2');
-let button2 = document.querySelector('#button2'); 
-
+let button2 = document.querySelector('#button2');
 let img2 = document.createElement('img');
 
-function fetchNews2() {
-    fetch(headlineNews)
-    .then(function (response) {
-return response.json();
-})
-.then (function (data) {
-    img2.src = data.articles[1].urlToImage;
-    imageDisplay2.appendChild(img2);
-    console.log(data);
-    title2.textContent = data.articles[1].title;
-    author2.textContent = data.articles[1].author;
-    summary2.textContent = data.articles[1].description;
-    button2.onclick = function () {
-        window.location.href = data.articles[1].url;
-    }
-})
-};
-fetchNews2();
-
-// 🔥🔥🔥 TILE 3 🔥🔥🔥
+// TILE 3 SELECTORS
 let imageDisplay3 = document.querySelector('#image-display3');
 let title3 = document.querySelector('#title3');
 let author3 = document.querySelector('#author3');
 let summary3 = document.querySelector('#summary3');
-let button3 = document.querySelector('#button3'); 
-
+let button3 = document.querySelector('#button3');
 let img3 = document.createElement('img');
 
-function fetchNews3() {
-    fetch(headlineNews)
-    .then(function (response) {
-return response.json();
-})
-.then (function (data) {
-    img3.src = data.articles[2].urlToImage;
-    imageDisplay3.appendChild(img3);
-    console.log(data);
-    title3.textContent = data.articles[2].title;
-    author3.textContent = data.articles[2].author;
-    summary3.textContent = data.articles[2].description;
-    button3.onclick = function () {
-        window.location.href = data.articles[2].url;
-    }
-})
-};
-fetchNews3();
-
-// 🔥🔥🔥 TILE 4 🔥🔥🔥
+// TILE 4 SELECTORS
 let imageDisplay4 = document.querySelector('#image-display4');
 let title4 = document.querySelector('#title4');
 let author4 = document.querySelector('#author4');
 let summary4 = document.querySelector('#summary4');
-let button4 = document.querySelector('#button4'); 
-
+let button4 = document.querySelector('#button4');
 let img4 = document.createElement('img');
 
-function fetchNews4() {
-    fetch(headlineNews)
-    .then(function (response) {
-return response.json();
-})
-.then (function (data) {
-    img4.src = data.articles[3].urlToImage;
-    imageDisplay4.appendChild(img4);
-    console.log(data);
-    title4.textContent = data.articles[3].title;
-    author4.textContent = data.articles[3].author;
-    summary4.textContent = data.articles[3].description;
-    button4.onclick = function () {
-        window.location.href = data.articles[3].url;
-    }
-})
-};
-fetchNews4();
+// BUTTON SELECTORS 
+let  businessBtn = document.querySelector('#business');
+let  entertainmentBtn = document.querySelector('#entertainment');
+let  generalBtn = document.querySelector('#general');
+let  healthBtn = document.querySelector('#health');
+let  scienceBtn = document.querySelector('#science');
+let  sportsBtn = document.querySelector('#sports');
+let  techBtn = document.querySelector('#tech');
+
+// ARRAYS
+let imageDisplays = [imageDisplay, imageDisplay2, imageDisplay3, imageDisplay4];
+let titles = [title, title2, title3, title4];
+let authors = [author, author2, author3, author4];
+let summaries = [summary, summary2, summary3, summary4];
+let buttons = [button, button2, button3, button4];
+let imgs = [img, img2, img3, img4];
+
+
+// 🔥🔥🔥 DEFAULT NEWS FUNCTION 🔥🔥🔥
+function fetchNews(url) {
+    fetch(url)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            for (let i = 0; i < data.articles.length; i++) {
+                if (data.articles[i].urlToImage == null || data.articles[i].urlToImage == undefined) {
+                    imgs[i].src = "assets/unavailable.png";
+                } else {
+                    imgs[i].src = data.articles[i].urlToImage;
+                }
+                imageDisplays[i].appendChild(imgs[i]);
+                titles[i].textContent = data.articles[i].title;
+                authors[i].textContent = data.articles[i].author;
+                summaries[i].textContent = data.articles[i].description;
+                buttons[i].onclick = function () {
+                    window.location.href = data.articles[i].url;
+                }
+            };
+        }
+ )};
+fetchNews(headlineNews);
+
+// 🔥🔥🔥 EVENT LISTENERS 🔥🔥🔥
+businessBtn.addEventListener('click', function () {
+    fetchNews(businessNews);
+});
+
+entertainmentBtn.addEventListener('click', function () {
+    fetchNews(entertainmentNews);
+});
+
+generalBtn.addEventListener('click', function () {
+    fetchNews(generalNews);
+});
+
+healthBtn.addEventListener('click', function () {
+    fetchNews(healthNews);
+});
+
+scienceBtn.addEventListener('click', function () {
+    fetchNews(scienceNews);
+});
+
+sportsBtn.addEventListener('click', function () {
+    fetchNews(sportsNews);
+});
+
+techBtn.addEventListener('click', function () {
+    fetchNews(techNews);
+});
 
 
 
