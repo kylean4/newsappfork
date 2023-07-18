@@ -157,7 +157,8 @@ function updateLocalStorageDisplay() {
 
  // Add event listener to the submit button
 submitButton.addEventListener('click', function() {
-      updateLocalStorageDisplay(); // Update the displayed local storage
+    signup();
+    updateLocalStorageDisplay();
  });
   
 // Get reference to the clear button
@@ -165,9 +166,17 @@ var clearButton = document.getElementById('clearButton');
 
 // Add event listener to the clear button
 clearButton.addEventListener('click', function() {
+    //Clear input values
+    document.getElementById('fname').value = '';
+    document.getElementById('lname').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('pwd').value = '';
     // Clear the local storage
     localStorage.clear();
 
     // Redirect the user to a new page
     window.location.href = 'newpage.html';
 });
+function scrollToSection(sectionId) {
+    document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+  }
