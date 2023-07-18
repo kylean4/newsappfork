@@ -78,70 +78,83 @@
 </div>
 
 <!-- Kyle's section -->
-<div class="form">
-<section class="section has-border">
+<section id="newsletter" class="newsletter has-border">
 
-  <div class="container">
-    <h1 class="title">Newsletter Signup</h1>
-    <form role="form" onsubmit="signUp(event);">
+    <div class="container">
+      <h1 class="title has-text-centered">Newsletter Signup</h1>
+      <div class="columns">
+        <div class="column is-one-third">
+          <!-- Add your image here on the left -->
+          <img src="path_to_your_left_image.jpg" alt="Left Image">
+        </div>
+        <div class="column is-one-third">
+          <form role="form" onsubmit="signUp(event);">
 
-      <div class="field">
-        <p class="control has-icons-left has-icons-right">
-          <input class="input is-rounded" input type="text" name="fname" id="fname" placeholder="First Name" required>
-          <span class="icon is-small is-left">
-            <i class="fas fa-envelope"></i>
-          </span>
-          <span class="icon is-small is-right">
-            <i class="fas fa-check"></i>
-          </span>
-        </p>
-      </div>
+            <div class="field">
+              <p class="control has-icons-left has-icons-right">
+                <input class="input is-rounded" input type="text" name="fname" id="fname" placeholder="First Name" required>
+                <span class="icon is-small is-left">
+                  <i class="fas fa-envelope"></i>
+                </span>
+                <span class="icon is-small is-right">
+                  <i class="fas fa-check"></i>
+                </span>
+              </p>
+            </div>
 
-      <div class="field">
-        <p class="control has-icons-left has-icons-right">
-          <input class="input is-rounded" input type="text" name="lname" id="lname" placeholder="Last Name" required>
-          <span class="icon is-small is-left">
-            <i class="fas fa-envelope"></i>
-          </span>
-          <span class="icon is-small is-right">
-            <i class="fas fa-check"></i>
-          </span>
-        </p>
-      </div>
+            <div class="field">
+              <p class="control has-icons-left has-icons-right">
+                <input class="input is-rounded" input type="text" name="lname" id="lname" placeholder="Last Name" required>
+                <span class="icon is-small is-left">
+                  <i class="fas fa-envelope"></i>
+                </span>
+                <span class="icon is-small is-right">
+                  <i class="fas fa-check"></i>
+                </span>
+              </p>
+            </div>
 
-      <div class="field">
-        <p class="control has-icons-left has-icons-right">
-          <input class="input is-rounded" input type="email" name="email" id="email" placeholder="Email Address" required>
-          <span class="icon is-small is-left">
-            <i class="fas fa-envelope"></i>
-          </span>
-          <span class="icon is-small is-right">
-            <i class="fas fa-check"></i>
-          </span>
-        </p>
-      </div>
+            <div class="field">
+              <p class="control has-icons-left has-icons-right">
+                <input class="input is-rounded" input type="email" name="email" id="email" placeholder="Email Address" required>
+                <span class="icon is-small is-left">
+                  <i class="fas fa-envelope"></i>
+                </span>
+                <span class="icon is-small is-right">
+                  <i class="fas fa-check"></i>
+                </span>
+              </p>
+            </div>
 
-      <div class="field">
-        <p class="control has-icons-left">
-          <input class="input is-rounded" input type="password" name="pwd" id="pwd" placeholder="Password" required>
-          <span class="icon is-small is-left">
-            <i class="fas fa-lock"></i>
-          </span>
-        </p>
+            <div class="field">
+              <p class="control has-icons-left">
+                <input class="input is-rounded" input type="password" name="pwd" id="pwd" placeholder="Password" required>
+                <span class="icon is-small is-left">
+                  <i class="fas fa-lock"></i>
+                </span>
+              </p>
+            </div>
+            <div class="field is-grouped is-grouped-centered">
+              <p class="control">
+                <button class="button is-primary is-rounded is-medium" id="Newsletter">
+                  Submit
+                </button>
+                <button class="button is-primary is-rounded is-medium" id="clearButton">
+                  Unsubscribe
+                </button>
+              </p>
+            </div>
+            <h1>Local Storage Example</h1>
+            <div id="dataContainer"></div>
+          </form>
+        </div>
+        <div class="column is-one-third">
+          <!-- Add your image here on the right -->
+          <img src="path_to_your_right_image.jpg" alt="Right Image">
+        </div>
       </div>
-      <div class="field is-grouped is-grouped-centered">
-        <p class="control">
-          <button class="button is-primary is-rounded" id="Newsletter">
-            Submit
-          </button>
-          <button class="button is-primary is-rounded" id="clearButton">
-            Unsubscribe
-          </button>
-        </p>
-      </div>
-        <h1>Local Storage Example</h1>
-        <div id="dataContainer"></div>
-</section>
+    </div>
+  </section>
 </div>
 
 <!-- Footer Element to be Added -->
