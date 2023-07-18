@@ -15,7 +15,7 @@ let imageDisplay = document.querySelector('#image-display');
 let title = document.querySelector('#title');
 let author = document.querySelector('#author');
 let summary = document.querySelector('#summary');
-let button = document.querySelector('#button');
+let btn1 = document.querySelector('#btn1');
 let img = document.createElement('img');
 
 // TILE 2 SELECTORS
@@ -23,7 +23,7 @@ let imageDisplay2 = document.querySelector('#image-display2');
 let title2 = document.querySelector('#title2');
 let author2 = document.querySelector('#author2');
 let summary2 = document.querySelector('#summary2');
-let button2 = document.querySelector('#button2');
+let btn2 = document.querySelector('#btn2');
 let img2 = document.createElement('img');
 
 // TILE 3 SELECTORS
@@ -31,7 +31,7 @@ let imageDisplay3 = document.querySelector('#image-display3');
 let title3 = document.querySelector('#title3');
 let author3 = document.querySelector('#author3');
 let summary3 = document.querySelector('#summary3');
-let button3 = document.querySelector('#button3');
+let btn3 = document.querySelector('#btn3');
 let img3 = document.createElement('img');
 
 // TILE 4 SELECTORS
@@ -39,7 +39,7 @@ let imageDisplay4 = document.querySelector('#image-display4');
 let title4 = document.querySelector('#title4');
 let author4 = document.querySelector('#author4');
 let summary4 = document.querySelector('#summary4');
-let button4 = document.querySelector('#button4');
+let btn4 = document.querySelector('#btn4');
 let img4 = document.createElement('img');
 
 // BUTTON SELECTORS 
@@ -56,7 +56,7 @@ let imageDisplays = [imageDisplay, imageDisplay2, imageDisplay3, imageDisplay4];
 let titles = [title, title2, title3, title4];
 let authors = [author, author2, author3, author4];
 let summaries = [summary, summary2, summary3, summary4];
-let buttons = [button, button2, button3, button4];
+let btns = [btn1, btn2, btn3, btn4];
 let imgs = [img, img2, img3, img4];
 
 
@@ -77,7 +77,7 @@ function fetchNews(url) {
                 titles[i].textContent = data.articles[i].title;
                 authors[i].textContent = data.articles[i].author;
                 summaries[i].textContent = data.articles[i].description;
-                buttons[i].onclick = function () {
+                btns[i].onclick = function () {
                     window.location.href = data.articles[i].url;
                 }
             };
