@@ -120,63 +120,81 @@ techBtn.addEventListener('click', function () {
 
 
 // Kyle's Variable and Functions
-const signUp = e => {
-  let formData = {
+const signUp = e =>
+{
+  let formData =
+  {
     fname: document.getElementById('fname').value,
     lname: document.getElementById('lname').value,
     email: document.getElementById('email').value,
     pwd: document.getElementById('pwd').value,
   };
+
   localStorage.setItem('formData', JSON.stringify(formData));
   console.log(localStorage.getItem('formData'));
   e.preventDefault();
+  updateLocalStorageDisplay();
+
+  document.getElementById('fname').value = '';
+  document.getElementById('lname').value = '';
+  document.getElementById('email').value = '';
+  document.getElementById('pwd').value = '';
+
 };
 
-  // Function to update the displayed local storage
-function updateLocalStorageDisplay() {
-  // Retrieve data from local storage
-  var storedData = localStorage.getItem('formData');
+// Function to update the displayed local storage
+function updateLocalStorageDisplay()
+{
+    // Retrieve data from local storage
+    var storedData = localStorage.getItem('formData');
 
- // Check if there is data in local storage
- if (storedData) {
-   // Parse the data from string to object (if needed)
-  var parsedData = JSON.parse(storedData);
+        // Check if there is data in local storage
+        if (storedData)
+        {
+            // Parse the data from string to object (if needed)
+            var parsedData = JSON.parse(storedData);
 
-     // Update the HTML with the stored data
-     var dataContainer = document.getElementById('dataContainer');
-     dataContainer.innerHTML = '<pre>' + JSON.stringify(parsedData, null, 2) + '</pre>';
- } else {
-     // No data found in local storage
-  var dataContainer = document.getElementById('dataContainer');
-  dataContainer.innerHTML = 'No data found.';
- }
+            // Update the HTML with the stored data
+            var dataContainer = document.getElementById('dataContainer');
+            dataContainer.innerHTML = '<pre>' + JSON.stringify(parsedData, null, 2) + '</pre>';
+        } 
+        else
+        {
+            // No data found in local storage
+            var dataContainer = document.getElementById('dataContainer');
+            dataContainer.innerHTML = 'No data found.';
+        }
 }
 
 // Get reference to the submit button
- var submitButton = document.getElementById('Newsletter');
+var submitButton = document.getElementById('Newsletter');
 
- // Add event listener to the submit button
-submitButton.addEventListener('click', function() {
-    signup();
-    updateLocalStorageDisplay();
- });
-  
+// Add event listener to the submit button
+submitButton.addEventListener('click', function () {
+  // Call the signUp function
+  signUp();
+  updateLocalStorageDisplay();
+});
+
 // Get reference to the clear button
 var clearButton = document.getElementById('clearButton');
 
 // Add event listener to the clear button
-clearButton.addEventListener('click', function() {
-    //Clear input values
-    document.getElementById('fname').value = '';
-    document.getElementById('lname').value = '';
-    document.getElementById('email').value = '';
-    document.getElementById('pwd').value = '';
-    // Clear the local storage
-    localStorage.clear();
+clearButton.addEventListener('click', function () {
+  // Clear the input values
+  document.getElementById('fname').value = '';
+  document.getElementById('lname').value = '';
+  document.getElementById('email').value = '';
+  document.getElementById('pwd').value = '';
 
-    // Redirect the user to a new page
-    window.location.href = 'newpage.html';
+  // Clear the local storage
+  localStorage.clear();
+  updateLocalStorageDisplay();
+
+  // Redirect the user to a new page
+  window.location.href = 'newpage.html';
 });
+
 function scrollToSection(sectionId) {
     document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
   }
