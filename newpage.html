@@ -1,48 +1,69 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
-</head>
-<body>
-  
-    <nav class="navbar" role="navigation" aria-label="main navigation">
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+    <div class="header">
+      <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
           <a class="navbar-item" href="index.html">
             <strong>Home</strong>
           </a>
         </div>
       </nav>
-  
+    </div>  
+  </head>
+<body>
+  <section class="hero is-fullheight is-flex is-justify-content-center is-align-items-center has-text-left">
     <div class="container">
-    <h1 class="title">Sorry to see you go!</h1>
-    <form>
-      <div class="field">
-        <label class="label">Check all that apply</label>
-        <div class="control">
-          <label class="checkbox">
-            <input type="checkbox">
-            News updates
+      <h1 class="title">Sorry to see you go!</h1>
+      <form>
+        <div class="field">
+          <label class="label">We have removed you from all NewsApp mailing lists.</label>
+          <label class="label">
+            Did you unsubscribe by accident? 
+            <a href="index.html##newsletter">Resubscribe Now</a>
           </label>
+          <div class="field">
+            <div class="control is-flex is-flex-direction-column is-align-items-left is-justify-content-center">
+              <label class="radio">
+                <input type="radio" name="answer" value="Never signed up">
+                I never signed up for your emails
+              </label>
+              <label class="radio">
+                <input type="radio" name="answer" value="Too many emails">
+                I get too many emails from you
+              </label>
+              <label class="radio">
+                <input type="radio" name="answer" value="Irrelevant content">
+                The content is no longer relevant to me
+              </label>
+              <label class="radio">
+                <input type="radio" name="answer" value="Unexpected content">
+                The content is not what I expected
+              </label>
+              <label class="radio">
+                <input type="radio" name="answer" value="Other reason" onchange="toggleOtherReasonTextbox()">
+                Other reason
+              </label>
+            </div>
+          </div>
+          <div class="field" id="otherReasonTextbox" style="display: none;">
+            <label class="label">Please specify the reason:</label>
+            <div class="control">
+              <textarea class="textarea" id="otherReason" rows="3"></textarea>
+            </div>
+          </div>
         </div>
-        <div class="control">
-          <label class="checkbox">
-            <input type="checkbox">
-            Sports updates
-          </label>
+        <div class="field">
+          <div class="control">
+            <button class="button is-primary" type="button" onclick="storeData()">Submit Feedback</button>
+          </div>
+          <h2>Local Storage Example</h2>
+          <div id="dataContainer"></div>
         </div>
-        <div class="control">
-          <label class="checkbox">
-            <input type="checkbox">
-            Unsubscribe all
-          </label>
-        </div>
-      </div>
-      <div class="field">
-        <div class="control">
-          <button class="button is-primary" type="submit">Unsubscribe</button>
-        </div>
-      </div>
-    </form>
-  </div>
+      </form>
+    </div>
+  </section>
+<script src="assets/npscript.js"></script>
 </body>
 </html>
