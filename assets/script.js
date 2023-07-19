@@ -1,4 +1,13 @@
 
+// 🔥🔥🔥HEADER🔥🔥🔥
+let ctaButton = document.querySelector('#cta-button');
+let newsLetterDiv = document.querySelector('#newsletter');
+
+ctaButton.addEventListener('click', function() {
+    newsLetterDiv.scrollIntoView();
+});
+
+
 // 🔥🔥🔥 Variables 🔥🔥🔥
 // API LINKS BY NEWS TOPIC
 let headlineNews = "https://newsapi.org/v2/top-headlines?country=us&apiKey=d41b7704e2764f2bbe291cbb929ef58f";

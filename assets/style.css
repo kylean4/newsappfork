@@ -1,4 +1,39 @@
 
+img {
+    width: 250px;
+}
+
+#cta-text {
+    margin-top: 70px;
+    margin-left: 80%;
+}
+
+#cta-button {
+    margin-top: 140px;
+    margin-left: -5%;
+}
+
+#masthead {
+    background-color: white;
+    display: flex;
+    font-size: 25px;
+}
+
+#nav-bar {
+    display: flex;
+    margin-top: 1px;
+    height: 75px;
+    margin-left: 600px;
+
+}
+
+#nav-button {
+    margin-top: 0px;
+    margin-left: 7%;
+    margin-bottom: 1px;
+}
+
+
 /* Garrett's CSS */
 
 .readmorecontainer {
@@ -9,25 +44,25 @@
 
 #btn1 {
     margin-left: 10px;
-    margin-top: -20px;
+    margin-top: 0px;
    
 }
 
 #btn2 {
     margin-left: 10px;
-    margin-top: -20px;
+    margin-top: 0px;
  
 }
 
 #btn3 {
     margin-left: 10px;
-    margin-top: -20px;
+    margin-top: 0px;
 
 }
 
 #btn4 {
     margin-left: 10px;
-    margin-top: -20px;
+    margin-top: 0px;
    
 }
 
