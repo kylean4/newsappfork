@@ -10,14 +10,14 @@ ctaButton.addEventListener('click', function() {
 
 // 🔥🔥🔥 Variables 🔥🔥🔥
 // API LINKS BY NEWS TOPIC
-let headlineNews = "https://newsapi.org/v2/top-headlines?country=us&apiKey=d41b7704e2764f2bbe291cbb929ef58f";
-let businessNews = "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=d41b7704e2764f2bbe291cbb929ef58f";
-let entertainmentNews = "https://newsapi.org/v2/top-headlines?country=us&category=entertainment&apiKey=d41b7704e2764f2bbe291cbb929ef58f";
-let generalNews = "https://newsapi.org/v2/top-headlines?country=us&category=general&apiKey=d41b7704e2764f2bbe291cbb929ef58f";
-let healthNews = "https://newsapi.org/v2/top-headlines?country=us&category=health&apiKey=d41b7704e2764f2bbe291cbb929ef58f";
-let scienceNews = "https://newsapi.org/v2/top-headlines?country=us&category=science&apiKey=d41b7704e2764f2bbe291cbb929ef58f";
-let sportsNews = "https://newsapi.org/v2/top-headlines?country=us&category=sports&apiKey=d41b7704e2764f2bbe291cbb929ef58f";
-let techNews = "https://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey=d41b7704e2764f2bbe291cbb929ef58f";
+let headlineNews = "https://newsapi.org/v2/top-headlines?country=us&apiKey=ab6b297c3d4d4c43bb3d338e3b4ac8dd";
+let businessNews = "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=ab6b297c3d4d4c43bb3d338e3b4ac8dd";
+let entertainmentNews = "https://newsapi.org/v2/top-headlines?country=us&category=entertainment&apiKey=ab6b297c3d4d4c43bb3d338e3b4ac8dd";
+let generalNews = "https://newsapi.org/v2/top-headlines?country=us&category=general&apiKey=ab6b297c3d4d4c43bb3d338e3b4ac8dd";
+let healthNews = "https://newsapi.org/v2/top-headlines?country=us&category=health&apiKey=ab6b297c3d4d4c43bb3d338e3b4ac8dd";
+let scienceNews = "https://newsapi.org/v2/top-headlines?country=us&category=science&apiKey=ab6b297c3d4d4c43bb3d338e3b4ac8dd";
+let sportsNews = "https://newsapi.org/v2/top-headlines?country=us&category=sports&apiKey=ab6b297c3d4d4c43bb3d338e3b4ac8dd";
+let techNews = "https://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey=ab6b297c3d4d4c43bb3d338e3b4ac8dd";
 
 // TILE 1 SELECTORS
 let imageDisplay = document.querySelector('#image-display');
